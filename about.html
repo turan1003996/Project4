@@ -63,7 +63,7 @@
         <div class="game-panel">
           <div class="game-hud" aria-label="Game status">
             <div class="game-hud-stats">
-              <span>Sprites tagged: <strong id="score">0 / 6</strong></span>
+              <span>Quest progress: <strong id="score">0 / 6 milestones</strong></span>
               <span>Energy: <strong id="energy">5 / 5</strong></span>
             </div>
             <span id="game-mode">READY</span>
@@ -106,7 +106,7 @@
       </section>
 
       <section class="container unlock-section" aria-labelledby="chapters-title">
-        <h2 id="chapters-title">Story chapters</h2>
+        <h2 id="chapters-title">Story milestones</h2>
         <p class="intro-note">
           Tag a sprite in the game to unlock each chapter. Complete all six
           to finish the run.
@@ -163,7 +163,7 @@
             <div class="chapter-content" hidden>
               <p class="unlock-type">Favorite player and inspiration</p>
               <h3>Cristiano Ronaldo</h3>
-              <p>Cristiano Ronaldo is my favorite player. Even if he reired, I have always admired his dedication and skill.</p>
+              <p>Cristiano Ronaldo is my favorite player. I admire his discipline, unmatched work ethic, and relentless drive to succeed. His example inspires me to keep improving in programming and in life.</p>
             </div>
           </article>
         </div>
@@ -192,7 +192,48 @@
         const energyLabel = document.querySelector("#energy");
         const modeLabel = document.querySelector("#game-mode");
         const statusLabel = document.querySelector("#game-status");
+        const cardsData = [
+          {
+            type: "Background",
+            title: "From Qazakh to Baku",
+            description: "I was born in the Qazakh region of Azerbaijan and now live in Baku."
+          },
+          {
+            type: "Qualification",
+            title: "Mathematics achievement",
+            description: "I got a bronze medal in the Republic Mathematics Olympiad and was accepted to ADA University."
+          },
+          {
+            type: "Activities",
+            title: "Learning beyond class",
+            description: "I enjoy solving math problems and have taken part in coding challenges and activities with Baku Youth Center."
+          },
+          {
+            type: "Current learning",
+            title: "Building for the web",
+            description: "In SITE 1101, I’m learning HTML, CSS, and JavaScript and want to make a personal web project of my own."
+          },
+          {
+            type: "Academic achievement",
+            title: "Olympiad Certificate",
+            description: "I won an Olympiad Certificate for mathematics and problem-solving. Working through challenging problems shaped my analytical thinking and taught me to approach complex questions step by step."
+          },
+          {
+            type: "Favorite player and inspiration",
+            title: "Cristiano Ronaldo",
+            description: "Cristiano Ronaldo is my favorite player. I admire his discipline, unmatched work ethic, and relentless drive to succeed. His example inspires me to keep improving in programming and in life."
+          }
+        ];
         const chapters = [...document.querySelectorAll(".unlock-card")];
+        if (chapters.length !== cardsData.length) {
+          throw new Error("Milestone data and cards must have matching lengths.");
+        }
+        cardsData.forEach((chapter, index) => {
+          const content = chapters[index].querySelector(".chapter-content");
+          content.querySelector(".unlock-type").textContent = chapter.type;
+          content.querySelector("h3").textContent = chapter.title;
+          content.querySelectorAll("p")[1].textContent = chapter.description;
+        });
         const held = new Set();
         const player = { x: 92, y: 200, speed: 220 };
         let sprites = [];
@@ -355,7 +396,7 @@
         }
 
         function updateHud() {
-          scoreLabel.textContent = `${score} / ${chapters.length}`;
+          scoreLabel.textContent = `${score} / ${cardsData.length} milestones`;
           energyLabel.textContent = `${energy} / ${maxEnergy}`;
           modeLabel.textContent = gameState.toUpperCase();
         }
