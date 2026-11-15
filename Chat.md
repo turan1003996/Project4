@@ -679,3 +679,20 @@ Get-ChildItem -File | Select-Object Name,Length; git --no-pager status --short; 
 Both HTML pages already point to the existing root-level turan-profile.png, and the certificate link and file are present. I’m adjusting the two image rules to explicitly set automatic height and remove their max-height constraints so the 4:5 proportions remain intact.
 
 Updated the CSS image rules with width: 100%, height: auto, aspect-ratio: 4 / 5, and object-fit: cover. Both HTML pages already use the correct root-level photo filename, and the certificate link is present. git diff --check passes.
+
+
+
+
+
+
+Please fix the profile picture frame and symmetry on index.html and style.css:
+
+CSS Frame & Photo Symmetries: Update style.css for .profile-frame and .profile-photo so that the decorative border frame (::before) and the photo are perfectly balanced, centered, and aligned without shifting or asymmetric spacing.
+Aspect Ratio & Fit: Ensure .profile-frame uses a clean max-width (e.g., 360px to 380px) and margin-inline: auto, and .profile-photo uses aspect-ratio: 4 / 5 with object-fit: cover and object-position: center top for a professional, centered look.
+Markup: Verify index.html uses the correct class structure:<div class="profile-frame"> <img class="profile-photo" src="turan-profile.png" alt="Turan Shahvaladov" width="800" height="1000"> </div>
+Please provide the clean, updated code blocks for style.css and index.html separately so I can copy and paste them directly without any diff errors.
+
+11:05 PM
+Edited
+ style.css+7-6
+Updated the frame to be centered with equal 12px decorative spacing on all sides. The image is layered above the frame and uses object-fit: cover with object-position: center top. The existing markup already matches the requested class structure and filename.

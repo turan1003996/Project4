@@ -208,22 +208,23 @@ main {
 
 .profile-frame {
   position: relative;
-  width: min(100%, 370px);
-  max-height: 490px;
-  justify-self: end;
+  width: 100%;
+  max-width: 370px;
+  margin-inline: auto;
 }
 
 .profile-frame::before {
   position: absolute;
   z-index: 0;
-  inset: 14px -14px -14px 14px;
+  inset: -12px;
   border: 2px solid #b8cec4;
-  border-radius: 22px;
+  border-radius: 30px;
   content: "";
 }
 
 .profile-photo {
   position: relative;
+  z-index: 1;
   display: block;
   width: 100%;
   height: auto;
@@ -232,7 +233,7 @@ main {
   border-radius: 22px;
   background: #e4ebe5;
   object-fit: cover;
-  object-position: center;
+  object-position: center top;
   box-shadow: var(--shadow-card);
 }
 
