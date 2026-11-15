@@ -590,3 +590,27 @@ The existing portrait styles preserve the 4:5 ratio and cover fit:
 
 
 Verified both image paths resolve to the project’s photo file.
+
+
+
+
+
+
+I’ll switch both image URLs to the explicitly encoded filename and verify the alt text, classes, and existing cover styling.
+
+
+Updated both image sources to URL-encode the space. The existing classes, alt text, and object-fit: cover styles remain in place.
+
+index.html
+
+
+about.html
+
+
+Verified that both encoded paths resolve to the root image and style.css retains cover cropping with a 4:5 aspect ratio.
+
+
++2
+-2
+9:35 PM
+22s
