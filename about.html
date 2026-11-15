@@ -53,7 +53,7 @@
             <p class="eyebrow">The midnight lab · mini-game</p>
             <h2 id="game-title">Clear the way to my story</h2>
             <p>
-              Guide the Night Scholar through a pixel-art city and tag four
+              Guide the Night Scholar through a pixel-art city and tag six
               wandering shadow sprites with harmless light pulses. Each one
               reveals a chapter from my portfolio.
             </p>
@@ -63,7 +63,7 @@
         <div class="game-panel">
           <div class="game-hud" aria-label="Game status">
             <div class="game-hud-stats">
-              <span>Sprites tagged: <strong id="score">0 / 4</strong></span>
+              <span>Sprites tagged: <strong id="score">0 / 6</strong></span>
               <span>Energy: <strong id="energy">5 / 5</strong></span>
             </div>
             <span id="game-mode">READY</span>
@@ -108,7 +108,7 @@
       <section class="container unlock-section" aria-labelledby="chapters-title">
         <h2 id="chapters-title">Story chapters</h2>
         <p class="intro-note">
-          Tag a sprite in the game to unlock each chapter. Complete all four
+          Tag a sprite in the game to unlock each chapter. Complete all six
           to finish the run.
         </p>
         <div class="unlock-grid">
@@ -141,11 +141,29 @@
           </article>
           <article class="unlock-card is-locked" data-chapter="3" aria-label="Locked: Current learning">
             <span class="lock-icon" aria-hidden="true">?</span>
-            <p>Chapter 4 is locked. Tag the final sprite to reveal what I’m learning.</p>
+            <p>Chapter 4 is locked. Tag another sprite to reveal what I’m learning.</p>
             <div class="chapter-content" hidden>
               <p class="unlock-type">Current learning</p>
               <h3>Building for the web</h3>
               <p>In SITE 1101, I’m learning HTML, CSS, and JavaScript and want to make a personal web project of my own.</p>
+            </div>
+          </article>
+          <article class="unlock-card is-locked" data-chapter="4" aria-label="Locked: Academic achievement">
+            <span class="lock-icon" aria-hidden="true">?</span>
+            <p>Chapter 5 is locked. Keep playing to reveal an academic achievement.</p>
+            <div class="chapter-content" hidden>
+              <p class="unlock-type">Academic achievement</p>
+              <h3>Olympiad Certificate</h3>
+              <p>I won an Olympiad Certificate for mathematics and problem-solving. Working through challenging problems shaped my analytical thinking and taught me to approach complex questions step by step.</p>
+            </div>
+          </article>
+          <article class="unlock-card is-locked" data-chapter="5" aria-label="Locked: Favorite player and inspiration">
+            <span class="lock-icon" aria-hidden="true">?</span>
+            <p>Chapter 6 is locked. Tag the final sprite to reveal who inspires me.</p>
+            <div class="chapter-content" hidden>
+              <p class="unlock-type">Favorite player &amp; inspiration</p>
+              <h3>Cristiano Ronaldo</h3>
+              <p>Cristiano Ronaldo is my favorite player. I admire his unmatched work ethic, discipline, and relentless drive to succeed. His example inspires me to keep improving in programming and in life.</p>
             </div>
           </article>
         </div>
@@ -326,9 +344,9 @@
             context.fillStyle = "#dbe8ef";
             context.font = "16px Segoe UI, sans-serif";
             const hint = gameState === "ready"
-              ? "Tag four shadow sprites to uncover four chapters"
+              ? `Tag ${chapters.length} shadow sprites to uncover ${chapters.length} chapters`
               : gameState === "won"
-                ? "All four chapters are now open below"
+                ? `All ${chapters.length} chapters are now open below`
                 : gameState === "lost"
                   ? "Start again and keep an eye on your energy"
                   : "Press P or select Resume to continue";
@@ -362,7 +380,7 @@
           pauseButton.hidden = true;
           startButton.textContent = won ? "Play again" : "Try again";
           statusLabel.textContent = won
-            ? "Run complete! All four story chapters are unlocked."
+            ? `Run complete! All ${chapters.length} story chapters are unlocked.`
             : "Out of energy. Start again when you’re ready.";
           updateHud();
           drawScene();
