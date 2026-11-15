@@ -614,3 +614,14 @@ Verified that both encoded paths resolve to the root image and style.css retains
 -2
 9:35 PM
 22s
+
+
+
+index.html
+
+
+about.html
+
+
+10:06 PM
+5s
