@@ -284,6 +284,13 @@ main {
   border-radius: 14px;
   background: var(--color-surface);
   box-shadow: 0 8px 26px rgb(29 43 42 / 5%);
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.career-card:hover {
+  transform: translateY(-3px);
+  border-color: #b8cec4;
+  box-shadow: var(--shadow-card);
 }
 
 .career-card h2 {
