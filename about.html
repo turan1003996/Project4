@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Background, qualifications, and activities for Turan Shahvaladov.">
+    <meta name="description" content="Turan Shahvaladov's background, qualifications, and activities.">
     <title>About | Turan Shahvaladov</title>
     <link rel="stylesheet" href="style.css">
   </head>
@@ -16,103 +16,137 @@
           <a href="about.html" aria-current="page">About</a>
           <a href="projects.html">Projects</a>
         </nav>
-        <a
-          class="github-link"
-          href="https://github.com/turan1003996/Project4.git"
-          aria-label="Visit my GitHub repository"
-          title="GitHub repository"
-        >
+        <a class="github-link" href="https://github.com/turan1003996/Project4" aria-label="GitHub: Turan Repository">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.32-3.76-1.32-.5-1.29-1.24-1.63-1.24-1.63-1.01-.69.08-.68.08-.68 1.12.08 1.7 1.15 1.7 1.15.99 1.69 2.6 1.2 3.23.91.1-.72.39-1.2.7-1.48-2.48-.28-5.08-1.24-5.08-5.52 0-1.22.43-2.21 1.15-2.99-.12-.28-.5-1.42.11-2.95 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.12-1.44 3.05-1.14 3.05-1.14.61 1.53.23 2.67.11 2.95.72.78 1.15 1.77 1.15 2.99 0 4.29-2.6 5.23-5.09 5.5.4.35.75 1.02.75 2.06v3.11c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/>
           </svg>
+          <span>GitHub: Turan Repository</span>
         </a>
       </div>
     </header>
 
     <main>
-      <section class="container page-intro">
-        <p class="eyebrow">Player profile · SITE 1101</p>
-        <h1>About me</h1>
-        <p>
-          A short introduction to where I’m coming from, what I’m learning,
-          and how I spend time outside class. Update each prompt with details
-          from your own experience. I was accepted to ADA University with a broze medal in the republic math olympiad. I am interested in technology and how people use it. I am also interested in Math. I love woking on some challenging math problems in my leisure times. Math has always been a passion of mine and I want to pursue it in the future. I am also interested in programming and web development. I am currently learning HTML, CSS, and JavaScript through SITE 1101 course. I am also interested in learning more about web development and programming in the future.
-        </p>
-      </section>
-
-      <section class="container quest-dashboard" aria-labelledby="quest-title">
-        <div class="quest-dashboard-header">
-          <div>
-            <p class="eyebrow">Current save file</p>
-            <h2 id="quest-title">My learning quest</h2>
-          </div>
-          <span class="level-badge">Level 1 · Student</span>
+      <section class="container about-layout" aria-labelledby="about-title">
+        <div>
+          <p class="eyebrow">Player profile · SITE 1101</p>
+          <h1 id="about-title">Curiosity is my superpower.</h1>
+          <p class="intro-note">
+            I was born in the Qazakh region of Azerbaijan and now live in Baku.
+            I love mathematics, especially working on olympiad problems. Also, this kind of competitions are regularly held at ADA University, and I’m also
+            beginning to explore programming and web development.
+          </p>
         </div>
-        <p>
-          Explore the milestones below to fill your progress bar. Your choices
-          stay in this page and reset when it is reloaded.
-        </p>
-        <label class="quest-progress-label" for="quest-progress">
-          Quest progress: <span id="quest-count">0 / 4 milestones</span>
-        </label>
-        <progress class="quest-progress" id="quest-progress" max="4" value="0">
-          0 of 4 milestones complete
-        </progress>
-        <p class="quest-status" id="quest-status" role="status" aria-live="polite">
-          No milestones completed yet. Choose a quest to begin.
-        </p>
+        <div class="about-photo-frame">
+          <img
+            class="about-photo"
+            src="Turan Picture.png"
+            alt="Turan Shahvaladov"
+            width="800"
+            height="1000"
+          >
+        </div>
       </section>
 
-      <section class="container quest-section" aria-labelledby="milestones-title">
-        <h2 id="milestones-title">Milestone log</h2>
+      <section class="container game-section" aria-labelledby="game-title">
+        <div class="game-heading">
+          <div>
+            <p class="eyebrow">The midnight lab · mini-game</p>
+            <h2 id="game-title">Clear the way to my story</h2>
+            <p>
+              Guide the Night Scholar through a pixel-art city and tag four
+              wandering shadow sprites with harmless light pulses. Each one
+              reveals a chapter from my portfolio.
+            </p>
+          </div>
+        </div>
+
+        <div class="game-panel">
+          <div class="game-hud" aria-label="Game status">
+            <div class="game-hud-stats">
+              <span>Sprites tagged: <strong id="score">0 / 4</strong></span>
+              <span>Energy: <strong id="energy">5 / 5</strong></span>
+            </div>
+            <span id="game-mode">READY</span>
+          </div>
+
+          <div class="game-canvas-wrap">
+            <canvas
+              class="game-canvas"
+              id="game-canvas"
+              width="800"
+              height="400"
+              tabindex="0"
+              aria-label="Mini-game arena. Move with arrow keys or WASD, and fire light pulses with Space."
+              aria-describedby="game-instructions game-status"
+            >
+              A mini-game arena. Use the controls below to play and unlock the story cards.
+            </canvas>
+          </div>
+
+          <div class="game-controls">
+            <button class="game-button" id="start-game" type="button">Start the game</button>
+            <button class="game-button" id="pause-game" type="button" hidden>Pause</button>
+            <p class="game-instructions" id="game-instructions">
+              Move: arrow keys or WASD · Pulse: Space · Pause: P
+            </p>
+          </div>
+
+          <div class="touch-controls" aria-label="Touch game controls">
+            <button class="touch-button" type="button" data-control="up" aria-label="Move up">↑</button>
+            <button class="touch-button" type="button" data-control="left" aria-label="Move left">←</button>
+            <button class="touch-button" type="button" data-control="right" aria-label="Move right">→</button>
+            <button class="touch-button" type="button" data-control="down" aria-label="Move down">↓</button>
+            <button class="touch-button" type="button" data-control="fire" aria-label="Fire light pulse">✦</button>
+          </div>
+
+          <p class="game-status" id="game-status" role="status" aria-live="polite">
+            Ready when you are. Start the game to begin the first chapter.
+          </p>
+        </div>
+      </section>
+
+      <section class="container unlock-section" aria-labelledby="chapters-title">
+        <h2 id="chapters-title">Story chapters</h2>
         <p class="intro-note">
-            Each milestone is a small step toward your next goal. You can mark
-            them complete in any order, and you can undo them if you want to
-            change your mind. From my perspective, I am currently building my skills through SITE 1101. Programming languages are my passion, and I’m excited to explore the possibilities of web development. Ecpecially, I am interested in learning more about JavaScript and how to use it to create interactive and dynamic websites. I am also interested in learning more about web development frameworks and libraries, such as React and Angular. I am excited to continue learning and growing as a developer, and I look forward to sharing my progress on this site. Because this course is a starting point for me, I am excited to see where my skills will take me in the future. I am also interested in learning more about web development and programming in the future.
+          Tag a sprite in the game to unlock each chapter. Complete all four
+          to finish the run.
         </p>
-        <div class="quest-grid">
-          <article class="quest-card">
-            <p class="quest-type">Background · Quest 01</p>
-            <h3>Where I started</h3>
-            <p>
-              I live in Baku, Azerbaijan. I was born in Qazakh region of Azerbaijan. My favorite activity is solving math problems. In addition to my academic interests, I enjoy participating in coding challenges and contributing to open-source projects. Actually, I have recently started to learn JavaScript. The reason for this is that I want to create more interactive and dynamic websites.
-            </p>
-            <button class="quest-button" type="button" aria-pressed="false">
-              Mark quest complete
-            </button>
+        <div class="unlock-grid">
+          <article class="unlock-card is-locked" data-chapter="0" aria-label="Locked: Background">
+            <span class="lock-icon" aria-hidden="true">?</span>
+            <p>Chapter 1 is locked. Tag a shadow sprite to reveal my background.</p>
+            <div class="chapter-content" hidden>
+              <p class="unlock-type">Background</p>
+              <h3>From Qazakh to Baku</h3>
+              <p>I was born in the Qazakh region of Azerbaijan and now live in Baku.</p>
+            </div>
           </article>
-
-          <article class="quest-card">
-            <p class="quest-type">Qualifications · Quest 02</p>
-            <h3>Skills in progress</h3>
-            <p>
-              My math skills are strong, and I have a solid foundation in programming. I am currently learning HTML, CSS, and JavaScript through SITE 1101 course. I am also interested in learning more about web development and programming in the future.
-            </p>
-            <button class="quest-button" type="button" aria-pressed="false">
-              Mark quest complete
-            </button>
+          <article class="unlock-card is-locked" data-chapter="1" aria-label="Locked: Qualification">
+            <span class="lock-icon" aria-hidden="true">?</span>
+            <p>Chapter 2 is locked. Keep playing to reveal a qualification.</p>
+            <div class="chapter-content" hidden>
+              <p class="unlock-type">Qualification</p>
+              <h3>Mathematics achievement</h3>
+              <p>I got a bronze medal in the Republic Mathematics Olympiad and was accepted to ADA University.</p>
+            </div>
           </article>
-
-          <article class="quest-card">
-            <p class="quest-type">Activities · Quest 03</p>
-            <h3>Outside the classroom</h3>
-            <p>
-              I have participated in various coding challenges and voluntary projects. I am also interested in learning more about web development and programming in the future. Baku Youth Center is one of the organizations I have been involved with, where I have contributed to various projects and initiatives. I am also interested in learning more about web development and programming in the future.
-            </p>
-            <button class="quest-button" type="button" aria-pressed="false">
-              Mark quest complete
-            </button>
+          <article class="unlock-card is-locked" data-chapter="2" aria-label="Locked: Activities">
+            <span class="lock-icon" aria-hidden="true">?</span>
+            <p>Chapter 3 is locked. One more sprite will reveal an activity.</p>
+            <div class="chapter-content" hidden>
+              <p class="unlock-type">Activities</p>
+              <h3>Learning beyond class</h3>
+              <p>I enjoy solving math problems and have taken part in coding challenges and activities with Baku Youth Center.</p>
+            </div>
           </article>
-
-          <article class="quest-card">
-            <p class="quest-type">Next step · Quest 04</p>
-            <h3>What I’m working toward</h3>
-            <p>
-              I am currently working for future math and coding competitions. I am also interested in learning more about web development and programming in the future. I am excited to continue learning and growing as a developer, and I look forward to sharing my progress on this site. Also, I am interested in developing one self project in the future. I am also interested in learning more about web development and programming in the future.
-            </p>
-            <button class="quest-button" type="button" aria-pressed="false">
-              Mark quest complete
-            </button>
+          <article class="unlock-card is-locked" data-chapter="3" aria-label="Locked: Current learning">
+            <span class="lock-icon" aria-hidden="true">?</span>
+            <p>Chapter 4 is locked. Tag the final sprite to reveal what I’m learning.</p>
+            <div class="chapter-content" hidden>
+              <p class="unlock-type">Current learning</p>
+              <h3>Building for the web</h3>
+              <p>In SITE 1101, I’m learning HTML, CSS, and JavaScript and want to make a personal web project of my own.</p>
+            </div>
           </article>
         </div>
       </section>
@@ -120,40 +154,405 @@
 
     <footer class="site-footer">
       <div class="footer-wrap">
-        <p>© <span id="current-year">2026</span> Turan Shahvaladov</p>
-        <p>Made for SITE 1101</p>
+        <p>© 2026 Turan Shahvaladov · SITE 1101</p>
+        <a class="github-link footer-github" href="https://github.com/turan1003996/Project4" aria-label="GitHub: Turan Repository">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.32-3.76-1.32-.5-1.29-1.24-1.63-1.24-1.63-1.01-.69.08-.68.08-.68 1.12.08 1.7 1.15 1.7 1.15.99 1.69 2.6 1.2 3.23.91.1-.72.39-1.2.7-1.48-2.48-.28-5.08-1.24-5.08-5.52 0-1.22.43-2.21 1.15-2.99-.12-.28-.5-1.42.11-2.95 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.12-1.44 3.05-1.14 3.05-1.14.61 1.53.23 2.67.11 2.95.72.78 1.15 1.77 1.15 2.99 0 4.29-2.6 5.23-5.09 5.5.4.35.75 1.02.75 2.06v3.11c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/>
+          </svg>
+          <span>GitHub: Turan Repository</span>
+        </a>
       </div>
     </footer>
 
     <script>
-      const questButtons = document.querySelectorAll(".quest-button");
-      const questProgress = document.querySelector("#quest-progress");
-      const questCount = document.querySelector("#quest-count");
-      const questStatus = document.querySelector("#quest-status");
+      (() => {
+        const canvas = document.querySelector("#game-canvas");
+        const context = canvas.getContext("2d");
+        const startButton = document.querySelector("#start-game");
+        const pauseButton = document.querySelector("#pause-game");
+        const scoreLabel = document.querySelector("#score");
+        const energyLabel = document.querySelector("#energy");
+        const modeLabel = document.querySelector("#game-mode");
+        const statusLabel = document.querySelector("#game-status");
+        const chapters = [...document.querySelectorAll(".unlock-card")];
+        const held = new Set();
+        const player = { x: 92, y: 200, speed: 220 };
+        let sprites = [];
+        let pulses = [];
+        let score = 0;
+        const maxEnergy = 5;
+        let energy = maxEnergy;
+        let gameState = "ready";
+        let lastFrame = 0;
+        let spawnClock = 0;
+        let shotClock = 0;
+        let animationFrame = 0;
+        let randomSeed = 17;
 
-      function updateQuestProgress() {
-        const completed = document.querySelectorAll(
-          '.quest-button[aria-pressed="true"]'
-        ).length;
-        const total = questButtons.length;
+        function random() {
+          randomSeed = (randomSeed * 16807) % 2147483647;
+          return (randomSeed - 1) / 2147483646;
+        }
 
-        questProgress.value = completed;
-        questCount.textContent = `${completed} / ${total} milestones`;
-        questStatus.textContent = completed === total
-          ? "All milestones complete. Nice work mapping your next steps."
-          : `${completed} of ${total} milestones completed. Keep going at your own pace.`;
-      }
+        function drawCity() {
+          const sky = context.createLinearGradient(0, 0, 0, canvas.height);
+          sky.addColorStop(0, "#14263b");
+          sky.addColorStop(1, "#26364a");
+          context.fillStyle = sky;
+          context.fillRect(0, 0, canvas.width, canvas.height);
 
-      questButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          const completed = button.getAttribute("aria-pressed") !== "true";
-          button.setAttribute("aria-pressed", String(completed));
-          button.textContent = completed
-            ? "Quest complete — undo"
-            : "Mark quest complete";
-          updateQuestProgress();
+          context.fillStyle = "#e7b961";
+          context.beginPath();
+          context.arc(680, 74, 28, 0, Math.PI * 2);
+          context.fill();
+
+          for (let index = 0; index < 24; index += 1) {
+            const x = (index * 97 + 31) % canvas.width;
+            const y = (index * 53 + 19) % 155;
+            context.fillStyle = index % 3 === 0 ? "#f7e9bc" : "#91a6b8";
+            context.fillRect(x, y, 2, 2);
+          }
+
+          context.fillStyle = "#182538";
+          for (let index = 0; index < 12; index += 1) {
+            const buildingWidth = 45 + (index % 3) * 18;
+            const buildingHeight = 75 + (index * 37) % 112;
+            const x = index * 72 - 10;
+            context.fillRect(x, 265 - buildingHeight, buildingWidth, buildingHeight);
+            context.fillStyle = "#d4b768";
+            for (let light = 0; light < 3; light += 1) {
+              context.fillRect(x + 10 + light * 13, 205 - (light % 2) * 21, 4, 6);
+            }
+            context.fillStyle = "#182538";
+          }
+
+          context.fillStyle = "#263342";
+          context.fillRect(0, 267, canvas.width, canvas.height - 267);
+          context.strokeStyle = "#526171";
+          context.setLineDash([22, 18]);
+          context.beginPath();
+          context.moveTo(0, 352);
+          context.lineTo(canvas.width, 352);
+          context.stroke();
+          context.setLineDash([]);
+        }
+
+        function drawHero() {
+          context.save();
+          context.translate(player.x, player.y);
+          context.fillStyle = "#263753";
+          context.beginPath();
+          context.moveTo(-14, -15);
+          context.lineTo(-34, -22);
+          context.lineTo(-31, 10);
+          context.lineTo(-18, 19);
+          context.lineTo(-7, 9);
+          context.closePath();
+          context.fill();
+
+          context.fillStyle = "#d7dce0";
+          context.fillRect(-8, -20, 20, 20);
+          context.fillStyle = "#172337";
+          context.beginPath();
+          context.moveTo(-11, -18);
+          context.lineTo(-10, -31);
+          context.lineTo(-2, -25);
+          context.lineTo(4, -31);
+          context.lineTo(11, -21);
+          context.closePath();
+          context.fill();
+          context.fillStyle = "#e7b961";
+          context.fillRect(1, -12, 4, 3);
+
+          context.fillStyle = "#314a68";
+          context.fillRect(-13, 0, 25, 30);
+          context.fillStyle = "#e7b961";
+          context.fillRect(-4, 8, 8, 7);
+          context.fillStyle = "#172337";
+          context.fillRect(-10, 28, 8, 13);
+          context.fillRect(5, 28, 8, 13);
+          context.fillStyle = "#dce8f5";
+          context.fillRect(9, -6, 21, 7);
+          context.fillStyle = "#e7b961";
+          context.fillRect(27, -8, 8, 11);
+          context.restore();
+        }
+
+        function drawSprite(sprite) {
+          context.save();
+          context.translate(sprite.x, sprite.y);
+          context.fillStyle = "#87ad87";
+          context.fillRect(-11, -14, 23, 24);
+          context.fillStyle = "#537d65";
+          context.fillRect(-13, -17, 26, 7);
+          context.fillStyle = "#f3d87c";
+          context.fillRect(-6, -7, 4, 4);
+          context.fillRect(4, -7, 4, 4);
+          context.fillStyle = "#344d43";
+          context.fillRect(-6, 3, 13, 3);
+          context.fillRect(-8, 10, 6, 11);
+          context.fillRect(4, 10, 6, 11);
+          context.restore();
+        }
+
+        function drawScene() {
+          drawCity();
+          pulses.forEach((pulse) => {
+            context.fillStyle = "#f5d276";
+            context.shadowColor = "#f5d276";
+            context.shadowBlur = 14;
+            context.beginPath();
+            context.arc(pulse.x, pulse.y, 6, 0, Math.PI * 2);
+            context.fill();
+            context.shadowBlur = 0;
+          });
+          sprites.forEach(drawSprite);
+          drawHero();
+
+          if (gameState !== "running") {
+            context.fillStyle = "rgb(9 17 29 / 54%)";
+            context.fillRect(0, 0, canvas.width, canvas.height);
+            context.textAlign = "center";
+            context.fillStyle = "#fff4d4";
+            context.font = "700 30px Segoe UI, sans-serif";
+            const title = gameState === "won"
+              ? "STORY COMPLETE!"
+              : gameState === "lost"
+                ? "RUN ENDED"
+                : gameState === "paused"
+                  ? "PAUSED"
+                  : "THE MIDNIGHT LAB";
+            context.fillText(title, canvas.width / 2, canvas.height / 2 - 8);
+            context.fillStyle = "#dbe8ef";
+            context.font = "16px Segoe UI, sans-serif";
+            const hint = gameState === "ready"
+              ? "Tag four shadow sprites to uncover four chapters"
+              : gameState === "won"
+                ? "All four chapters are now open below"
+                : gameState === "lost"
+                  ? "Start again and keep an eye on your energy"
+                  : "Press P or select Resume to continue";
+            context.fillText(hint, canvas.width / 2, canvas.height / 2 + 23);
+          }
+        }
+
+        function updateHud() {
+          scoreLabel.textContent = `${score} / ${chapters.length}`;
+          energyLabel.textContent = `${energy} / ${maxEnergy}`;
+          modeLabel.textContent = gameState.toUpperCase();
+        }
+
+        function unlockChapter(index) {
+          const card = chapters[index];
+          if (!card) return;
+          const lockedMessage = card.querySelector(":scope > p");
+          const icon = card.querySelector(".lock-icon");
+          const content = card.querySelector(".chapter-content");
+          if (lockedMessage) lockedMessage.remove();
+          if (icon) icon.remove();
+          content.hidden = false;
+          card.classList.remove("is-locked");
+          card.classList.add("is-unlocked");
+          card.setAttribute("aria-label", `Unlocked: ${content.querySelector("h3").textContent}`);
+        }
+
+        function finishGame(won) {
+          gameState = won ? "won" : "lost";
+          cancelAnimationFrame(animationFrame);
+          pauseButton.hidden = true;
+          startButton.textContent = won ? "Play again" : "Try again";
+          statusLabel.textContent = won
+            ? "Run complete! All four story chapters are unlocked."
+            : "Out of energy. Start again when you’re ready.";
+          updateHud();
+          drawScene();
+        }
+
+        function startGame() {
+          cancelAnimationFrame(animationFrame);
+          score = 0;
+          energy = maxEnergy;
+          sprites = [];
+          pulses = [];
+          player.x = 92;
+          player.y = canvas.height / 2;
+          spawnClock = 0;
+          shotClock = 0;
+          lastFrame = 0;
+          randomSeed = 17;
+          chapters.forEach((card, index) => {
+            const content = card.querySelector(".chapter-content");
+            if (content.hidden) return;
+            content.hidden = true;
+            card.classList.remove("is-unlocked");
+            card.classList.add("is-locked");
+            card.setAttribute("aria-label", `Locked: ${content.querySelector("h3").textContent}`);
+            const icon = document.createElement("span");
+            icon.className = "lock-icon";
+            icon.setAttribute("aria-hidden", "true");
+            icon.textContent = "?";
+            const message = document.createElement("p");
+            message.textContent = `Chapter ${index + 1} is locked. Tag a shadow sprite to reveal it.`;
+            card.prepend(icon, message);
+          });
+          held.clear();
+          gameState = "running";
+          startButton.textContent = "Restart game";
+          pauseButton.hidden = false;
+          pauseButton.textContent = "Pause";
+          statusLabel.textContent = "The run is on. Move around and tag the sprites with light pulses.";
+          updateHud();
+          drawScene();
+          canvas.focus();
+          animationFrame = requestAnimationFrame(frame);
+        }
+
+        function setPaused() {
+          if (gameState === "running") {
+            gameState = "paused";
+            cancelAnimationFrame(animationFrame);
+            pauseButton.textContent = "Resume";
+            statusLabel.textContent = "Game paused. Select Resume or press P to continue.";
+            drawScene();
+          } else if (gameState === "paused") {
+            gameState = "running";
+            lastFrame = 0;
+            pauseButton.textContent = "Pause";
+            statusLabel.textContent = "Back in the game.";
+            canvas.focus();
+            animationFrame = requestAnimationFrame(frame);
+          }
+          updateHud();
+        }
+
+        function movePlayer(delta) {
+          let dx = 0;
+          let dy = 0;
+          if (held.has("ArrowLeft") || held.has("a")) dx -= 1;
+          if (held.has("ArrowRight") || held.has("d")) dx += 1;
+          if (held.has("ArrowUp") || held.has("w")) dy -= 1;
+          if (held.has("ArrowDown") || held.has("s")) dy += 1;
+          const length = Math.hypot(dx, dy) || 1;
+          player.x = Math.max(34, Math.min(canvas.width * 0.62, player.x + (dx / length) * player.speed * delta));
+          player.y = Math.max(58, Math.min(canvas.height - 48, player.y + (dy / length) * player.speed * delta));
+        }
+
+        function frame(time) {
+          if (gameState !== "running") return;
+          const delta = Math.min((time - (lastFrame || time)) / 1000, 0.04);
+          lastFrame = time;
+          spawnClock += delta;
+          shotClock += delta;
+          movePlayer(delta);
+
+          if (spawnClock >= 1.35) {
+            spawnClock = 0;
+            sprites.push({
+              x: canvas.width + 24,
+              y: 58 + random() * (canvas.height - 116),
+              speed: 74 + random() * 28 + score * 6
+            });
+          }
+
+          if (held.has(" ") && shotClock >= 0.24) {
+            pulses.push({ x: player.x + 34, y: player.y - 3 });
+            shotClock = 0;
+          }
+
+          pulses.forEach((pulse) => {
+            pulse.x += 440 * delta;
+          });
+          pulses = pulses.filter((pulse) => pulse.x < canvas.width + 12);
+
+          sprites.forEach((sprite) => {
+            sprite.x -= sprite.speed * delta;
+          });
+
+          for (let spriteIndex = sprites.length - 1; spriteIndex >= 0; spriteIndex -= 1) {
+            const sprite = sprites[spriteIndex];
+            const hitIndex = pulses.findIndex((pulse) =>
+              Math.hypot(pulse.x - sprite.x, pulse.y - sprite.y) < 24
+            );
+            if (hitIndex !== -1) {
+              sprites.splice(spriteIndex, 1);
+              pulses.splice(hitIndex, 1);
+              if (score < chapters.length) {
+                unlockChapter(score);
+                score += 1;
+                statusLabel.textContent = score === chapters.length
+                  ? "Every chapter revealed. You cleared the midnight lab!"
+                  : `Chapter ${score} revealed. ${chapters.length - score} more to go.`;
+              }
+              if (score === chapters.length) {
+                updateHud();
+                finishGame(true);
+                return;
+              }
+            } else if (sprite.x < player.x - 22) {
+              sprites.splice(spriteIndex, 1);
+              energy -= 1;
+              if (energy <= 0) {
+                updateHud();
+                finishGame(false);
+                return;
+              }
+              statusLabel.textContent = "A sprite slipped past. Keep moving and protect your energy.";
+            }
+          }
+
+          updateHud();
+          drawScene();
+          animationFrame = requestAnimationFrame(frame);
+        }
+
+        function keyForControl(control) {
+          return {
+            up: "ArrowUp",
+            down: "ArrowDown",
+            left: "ArrowLeft",
+            right: "ArrowRight",
+            fire: " "
+          }[control];
+        }
+
+        startButton.addEventListener("click", startGame);
+        pauseButton.addEventListener("click", setPaused);
+
+        canvas.addEventListener("keydown", (event) => {
+          const key = event.key.length === 1 ? event.key.toLowerCase() : event.key;
+          if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", " "].includes(key)) {
+            event.preventDefault();
+          }
+          if (key === "p" && (gameState === "running" || gameState === "paused")) {
+            setPaused();
+            return;
+          }
+          held.add(key);
         });
-      });
+
+        canvas.addEventListener("keyup", (event) => {
+          const key = event.key.length === 1 ? event.key.toLowerCase() : event.key;
+          held.delete(key);
+        });
+
+        canvas.addEventListener("blur", () => held.clear());
+
+        document.querySelectorAll("[data-control]").forEach((button) => {
+          const controlKey = keyForControl(button.dataset.control);
+          button.addEventListener("pointerdown", (event) => {
+            event.preventDefault();
+            button.setPointerCapture(event.pointerId);
+            held.add(controlKey);
+          });
+          button.addEventListener("pointerup", () => held.delete(controlKey));
+          button.addEventListener("pointercancel", () => held.delete(controlKey));
+          button.addEventListener("lostpointercapture", () => held.delete(controlKey));
+        });
+
+        window.addEventListener("blur", () => held.clear());
+        updateHud();
+        drawScene();
+      })();
     </script>
   </body>
 </html>

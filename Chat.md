@@ -93,3 +93,21 @@ Edited
 Added the README template to README.md, including the project overview, file structure, features, Live Server steps, and GitHub Pages publishing instructions.
 
 Chat.md isn’t currently in the project folder, so the structure lists it as optional.
+
+
+
+Please completely update and upgrade my SITE 1101 portfolio project files (index.html, about.html, projects.html, and style.css) to fix all layout and feature issues:
+
+Image Fixes & Layout:
+Fix all image containers across index.html, about.html, and projects.html so that profile pictures and project screenshots maintain proper aspect ratios (using object-fit: cover, clean borders, and proper max-width/height) without stretching or distorting.
+Navigation Bar & Footer & GitHub Link:
+Ensure every page (index, about, projects) has a modern, sticky Navigation bar with clear links to Home, About, and Projects.
+Improve the Footer design to look clean, professional, and consistent.
+Update the GitHub icon link in the header/footer so it explicitly displays text next to the icon, e.g., "GitHub: Turan Repository" (clickable).
+Gamified Interactive About Page (about.html) [10% Bonus Goal]:
+Replace the simple milestone buttons with a truly engaging, interactive mini-game right on the page!
+Create a canvas-based or DOM-based retro mini-game where a character (Bat-man style hero with a weapon) shoots incoming zombies/enemies across a small game arena.
+As the player defeats zombies, milestone data cards or background/qualification details automatically unlock and display on the screen, blending gaming with my resume/about info. Make it super fun and polished!
+Please provide the updated, clean code for style.css, index.html, about.html, and projects.html.
+
+6:17 PM
