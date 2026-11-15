@@ -1,6 +1,6 @@
 # SITE 1101 Personal Portfolio
 
-A personal portfolio website created for SITE 1101. It introduces the author, shares background and activities through an interactive About page, and presents Project 1.
+A personal portfolio website created for SITE 1101. It introduces the author, shares background and activities through an interactive About page, presents Project 1, and summarizes education and career development.
 
 > Before publishing, replace the sample name, text, photo, project details, and GitHub repository link with your own.
 
@@ -11,6 +11,7 @@ A personal portfolio website created for SITE 1101. It introduces the author, sh
 ├── index.html      # Home page and introduction
 ├── about.html      # Background, qualifications, activities, and quest tracker
 ├── projects.html   # Project 1 description and screenshot placeholder
+├── career.html     # Education, technical skills, volunteering, and career activity
 ├── style.css       # Shared layout, typography, and responsive styles
 ├── README.md       # Project documentation
 └── Chat.md         # Optional project or assignment notes, if included
@@ -28,7 +29,7 @@ A personal portfolio website created for SITE 1101. It introduces the author, sh
 1. Open this project folder in Visual Studio Code.
 2. Install the **Live Server** extension if it is not already installed.
 3. In the Explorer, right-click `index.html` and choose **Open with Live Server**.
-4. The site opens in your browser. Use the navigation links to visit the About and Projects pages.
+4. The site opens in your browser. Use the navigation links to visit the About, Projects, and Career pages.
 
 ## Publish with GitHub Pages
 
