@@ -206,35 +206,42 @@ main {
   color: #fff;
 }
 
-.profile-frame {
+.profile-frame,
+.about-photo-frame {
   position: relative;
   width: 100%;
-  max-width: 370px;
+  aspect-ratio: 4 / 5;
   margin-inline: auto;
+  padding: 5px;
+  overflow: hidden;
+  border-radius: 26px;
+  background: linear-gradient(135deg, var(--color-accent), var(--color-gold));
+  box-shadow: var(--shadow-card);
+  transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
-.profile-frame::before {
-  position: absolute;
-  z-index: 0;
-  inset: -12px;
-  border: 2px solid #b8cec4;
-  border-radius: 30px;
-  content: "";
+.profile-frame {
+  max-width: 370px;
+}
+
+.about-photo-frame {
+  max-width: 300px;
+}
+
+.profile-frame:hover,
+.about-photo-frame:hover {
+  transform: translateY(-4px) scale(1.015);
+  box-shadow: 0 20px 44px rgb(29 43 42 / 14%);
 }
 
 .profile-photo {
-  position: relative;
-  z-index: 1;
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 5;
-  border: 1px solid var(--color-border);
-  border-radius: 22px;
+  height: 100%;
+  border-radius: 21px;
   background: #e4ebe5;
   object-fit: cover;
-  object-position: center top;
-  box-shadow: var(--shadow-card);
+  object-position: center;
 }
 
 .content-section {
@@ -353,23 +360,14 @@ main {
   font-size: 1.05rem;
 }
 
-.about-photo-frame {
-  width: min(100%, 300px);
-  max-height: 380px;
-  justify-self: end;
-}
-
 .about-photo {
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 5;
-  border: 1px solid var(--color-border);
-  border-radius: 18px;
+  height: 100%;
+  border-radius: 21px;
   background: #e4ebe5;
   object-fit: cover;
   object-position: center;
-  box-shadow: var(--shadow-card);
 }
 
 .game-section {
@@ -714,7 +712,6 @@ main {
 
   .profile-frame {
     width: min(78%, 330px);
-    justify-self: center;
   }
 
   .about-layout {
@@ -724,11 +721,6 @@ main {
 
   .career-grid {
     grid-template-columns: 1fr;
-  }
-
-  .about-photo-frame {
-    width: min(76%, 280px);
-    justify-self: center;
   }
 
   .game-heading {

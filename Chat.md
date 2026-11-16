@@ -696,3 +696,38 @@ Please provide the clean, updated code blocks for style.css and index.html separ
 Edited
  style.css+7-6
 Updated the frame to be centered with equal 12px decorative spacing on all sides. The image is layered above the frame and uses object-fit: cover with object-position: center top. The existing markup already matches the requested class structure and filename.
+
+
+
+
+Update style.css, index.html, and about.html directly to fix the profile photo gaps and upgrade the frame design:
+
+Remove Photo Gaps & Fill Frame: Update .profile-photo and .about-photo in style.css to use width: 100%; height: 100%; object-fit: cover; and object-position: center; so the photos completely fill their frames with zero empty side gaps.
+Enhanced Modern Design: Remove the old offset ::before border on .profile-frame. Instead, style both .profile-frame and .about-photo-frame with a sleek modern gradient border (using the existing accent green and gold colors), rounded corners, a soft elevation shadow, and a subtle hover lift/zoom effect.
+Clean Alignment: Ensure both frames are symmetrically aligned and centered properly on desktop and mobile viewports.
+Apply these edits directly to the workspace files.
+
+6:24 AM
+
+
+
+
+
+The photo markup already points to the correct root-level file on both pages. I’m replacing the offset frame decoration with a centered gradient-border frame, sizing each frame by aspect ratio so its photo can fill the interior, and removing mobile overrides that work against consistent centering.
+
+Edited
+ style.css+28-36
+
+
+
+
+
+
+Updated style.css with centered, aspect-ratio gradient frames, full-cover photos, soft shadows, and a subtle hover lift. The existing profile markup and image paths in index.html and about.html already matched, so I left them unchanged. git diff --check passes.
+
+
++28
+-36
+6:25 AM
+50s
+•
