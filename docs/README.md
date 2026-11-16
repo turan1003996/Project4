@@ -10,18 +10,24 @@ A personal portfolio website created for SITE 1101. It introduces the author, sh
 .
 ├── index.html      # Home page and introduction
 ├── about.html      # Background, qualifications, activities, and quest tracker
-├── projects.html   # Project 1 description and screenshot placeholder
+├── projects.html   # Project 1 description and screenshot
 ├── career.html     # Education, technical skills, volunteering, and career activity
 ├── style.css       # Shared layout, typography, and responsive styles
-├── README.md       # Project documentation
-└── Chat.md         # Optional project or assignment notes, if included
+├── docs/
+│   ├── README.md   # Project documentation
+│   └── Chat.md     # Project notes
+└── media/
+    ├── turan-profile.png
+    ├── Turan Picture.png
+    ├── certificate.jpg
+    └── Project 1.jpg
 ```
 
 ## Features
 
 - Responsive layout with consistent navigation and footer across pages.
 - Interactive About page with a gamified milestone tracker.
-- Project 1 card with a description and image placeholder.
+- Project 1 card with a description and screenshot.
 - Shared CSS for a consistent visual style.
 
 ## Run locally
