@@ -929,3 +929,23 @@ Local HTML asset references resolve, and the targeted git diff --check passes.
 -88
 10:39 AM
 4m 9s
+
+
+
+
+
+
+
+Findings
+The failed deployment was configuration-related, not a build or HTML error. In run #19, the build succeeded, but the deploy job failed with an HTTP 404 while creating the Pages deployment. Its log says to ensure GitHub Pages is enabled.
+The latest run, #33, built successfully, but its deploy job was cancelled. Several nearby runs were also cancelled; that differs from a build failure.
+The published site URL currently returns 404. In the repository’s Settings → Pages, check that Build and deployment → Source is set to GitHub Actions, then rerun the latest workflow.
+Locally, main is clean and matches origin/main at 7bb577c; there is no .git/index.lock. HTML tags are balanced, and the local image/CSS asset references resolve—including media/ada.image.jpg.
+Useful commands
+After changing files, use a normal push:
+
+A force push is not needed to fix this Pages deployment issue. Only if you intentionally rewrote commit history and understand the impact, use git push --force-with-lease origin main—not plain --force.
+
+10:51 AM
+3m 7s
+•
