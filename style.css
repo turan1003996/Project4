@@ -1,7 +1,7 @@
 :root {
   color-scheme: dark;
-  --color-ink: #f7fbfa;
-  --color-muted: #d1ddda;
+  --color-ink: #f8fafc;
+  --color-muted: #f8fafc;
   --color-paper: #07110f;
   --color-surface: rgb(16 29 27 / 76%);
   --color-accent: #82eac2;
@@ -39,6 +39,7 @@ body {
   color: var(--color-ink);
   font-family: var(--font-body);
   font-size: 1rem;
+  font-weight: 400;
   line-height: 1.7;
 }
 
@@ -118,17 +119,14 @@ p {
 h1,
 h2,
 h3 {
-  color: #f7fffc;
-  font-weight: 750;
+  color: #fff8e8;
+  font-weight: 650;
   line-height: 1.2;
-}
-
-h2,
-h3 {
-  background: linear-gradient(105deg, #f7fffc 8%, #aff2d8 62%, #ffdc9d 100%);
+  background: linear-gradient(105deg, #fff8e8 5%, #ffd783 56%, #ffad66 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 18px rgb(255 184 77 / 16%);
 }
 
 .container,
@@ -259,11 +257,7 @@ main {
 .home-hero h1,
 .about-layout h1,
 .page-intro h1 {
-  color: #f5fffb;
-  background: linear-gradient(110deg, #f3fff9 5%, #95f1d0 54%, #ffd18a 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(110deg, #fff8e8 5%, #ffd783 54%, #ffad66 100%);
 }
 
 .hero-copy {

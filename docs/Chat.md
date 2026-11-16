@@ -1075,3 +1075,86 @@ Updated the shared typography rules in style.css. The global body line height is
 -6
 5:21 PM
 55s
+
+
+
+
+I’ll keep the stronger red/orange treatment scoped to the learning card and flame, while brightening the shared text palette so readability improves across every page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Edited
+ style.css+1-0
+
+
+Updated index.html and style.css. The learning card now has a pulsing red-orange flame aura and crimson glows; the brighter shared text palette improves contrast across pages. The existing reduced-motion rule still applies. git diff --check passed.
+
+index.html
+
+
+style.css — relevant rules
+
+
+
++56
+-12
+5:27 PM
+
+
+
+
+
+
+Please update style.css to improve typography colors and contrast across the entire portfolio for a much sharper, high-end look:
+
+High-Contrast Text Colors: Update the main paragraph and body texts inside all cards to use a crisp, bright, high-contrast off-white or soft cream color (#f8fafc) so they stand out effortlessly against the dark glassmorphic backgrounds.
+Vibrant Accent Headings: Make all section headings and key titles (like "Hello, I'm Turan", milestone titles, and card headers) use a striking, vibrant accent color—such as a warm glowing gold/amber gradient or a bright fiery tone—to match the site's creative design.
+Enhanced Readability: Ensure font-weights (medium/semibold for headings, regular for paragraphs) and text-shadows are optimized so every single word is crystal clear and easy to read without eye strain.
+Apply these changes directly to style.css.
+
+5:33 PM
+
+
+I’ll align the shared paragraph and heading styles with the requested cream-and-amber palette, checking card-specific overrides so the change remains consistent across pages.
+
+
+
+
+
+
+
+
+
+
+I found several card paragraphs using the shared muted color and headings split between two gradients. I’ll unify those around #f8fafc body text and a warm amber gradient with restrained glow, using medium-semibold heading weights.
+
+
+
+
+
+
+Updated style.css: body and muted text now use #f8fafc, and all headings use a warm amber gradient with a subtle glow and medium-semibold weight. git diff --check passed.
+
+
++8
+-14
+5:34 PM
