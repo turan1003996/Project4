@@ -751,16 +751,23 @@ main {
   box-shadow: var(--shadow-card), 0 0 34px rgb(62 220 170 / 12%);
 }
 
+.project-image-frame {
+  padding: clamp(0.75rem, 2vw, 1.25rem);
+  border-bottom: 1px solid var(--color-border);
+  border-radius: 21px 21px 0 0;
+  background: linear-gradient(145deg, rgb(5 13 13 / 88%), rgb(19 35 33 / 78%));
+}
+
 .project-image {
   display: block;
   width: 100%;
   max-width: 100%;
-  max-height: 560px;
+  max-height: 460px;
   height: auto;
   margin-inline: auto;
-  border-bottom: 1px solid var(--color-border);
-  background: #152421;
-  object-fit: cover;
+  border-radius: 12px;
+  background: rgb(5 13 13 / 72%);
+  object-fit: contain;
   object-position: center;
 }
 

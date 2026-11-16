@@ -949,3 +949,37 @@ A force push is not needed to fix this Pages deployment issue. Only if you inten
 10:51 AM
 3m 7s
 •
+
+
+
+
+
+Update projects.html and style.css directly to fix the Project 1 image zooming and cropping issue:
+
+Prevent Cropping & Zooming: Change .project-image in style.css so it no longer zooms in or crops the screenshot. Use object-fit: contain; instead of object-fit: cover;, and set width: 100%; height: auto; max-height: 460px; so the entire image is visible from a natural distance without cutting off any edges.
+Clean Frame & Container: Add a subtle, sleek dark or glassmorphic background behind the image container with clean padding and rounded corners so the full portrait/landscape screenshot looks well-framed and balanced inside the card.
+Apply these edits directly to the workspace files.
+
+10:55 AM
+
+
+
+
+
+
+
+
+I’ll add a padded image frame around the project screenshot and update its sizing so the full image remains visible.
+
+
+
+Updated projects.html with a padded image-frame container. In style.css, the screenshot now uses object-fit: contain, width: 100%, height: auto, and max-height: 460px, with a subtle dark rounded frame.
+
+git diff --check passes.
+
+
++13
+-4
+10:55 AM
+50s
+•
