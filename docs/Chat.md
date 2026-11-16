@@ -824,3 +824,64 @@ For VS Code, added a workspace setting to show root files before folders in sett
 +18
 -8
 6:40 AM
+
+
+
+
+
+
+I’ll check the current Career page structure and asset location, then apply the backgrounds and contrast styles without disturbing existing page layout or content.
+
+Get-ChildItem -Force | Select-Object Mode,Name,Length; Get-ChildItem -Recurse -File -Include 'ada.image.jpg','ada.image.jpeg','ada.image.png' | Select-Object FullName,Length; git --no-pager status --short
+Search for class="[^"]*(career|page-intro|container)|<main|<section|<article
+
+The ADA campus image is available at the project root. I’m adding a Career-specific body class so the campus background and readability overlay stay isolated to that page; the other pages will keep a refined ambient gradient background.
+
+Edited
+ style.css+4-0
+git --no-pager diff -- style.css career.html; git --no-pager status --short; Get-Item -LiteralPath 'ada.image.jpg' | Select-Object Name,Length
+Updated style.css and career.html. The existing root-level ada.image.jpg is used for Career, with a dark overlay; mobile uses a scrollable background. Home, About, and Projects retain the ambient gradient, now with a subtle grid.
+
+CSS rules added/updated:
+
+
+Career page markup change:
+
+
+The targeted whitespace check passed. A repo-wide check still reports a pre-existing trailing blank line in Chat.md; I left that unrelated file unchanged.
+
+
++36
+-3
+10:26 AM
+1m 43s
+
+
+
+I’ll move the campus image into media/, update its CSS URL and the README’s structure listing, then verify the image reference resolves.
+
+Get-ChildItem -Force | Select-Object Name,Mode; Get-ChildItem -File 'media' | Select-Object Name,Length; Get-ChildItem -File -Filter 'ada.image.jpg' | Select-Object Name,Length; git --no-pager status --short; rg -n 'ada\.image\.jpg|Project 1\.jpg|turan-profile\.png|certificate\.jpg' --glob '!docs/Chat.md' .
+Move-Item -LiteralPath 'ada.image.jpg' -Destination 'media\ada.image.jpg'; if (-not (Test-Path -LiteralPath 'media\ada.image.jpg')) { throw 'Campus image was not moved into media.' }; if (Test-Path -LiteralPath 'ada.image.jpg') { throw 'Campus image unexpectedly remains in the project root.' }; Get-Item -LiteralPath 'media\ada.image.jpg' | Select-Object Name,Length,FullName
+
+
+Get-ChildItem -File 'media' | Select-Object Name,Length; git --no-pager status --short; git --no-pager diff --stat; git --no-pager diff -- style.css career.html docs/README.md
+
+
+Edited
+ README.md+1-0
+
+
+
+Moved the campus photo to media/ada.image.jpg, updated the Career background URL, and revised the structure listing in docs/README.md. The Career page already has the career-page class needed to apply the background, so no additional markup change was necessary.
+
+style.css
+
+career.html
+
+README.md
+
+
++3
+-2
+10:30 AM
+58s

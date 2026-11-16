@@ -20,7 +20,8 @@ A personal portfolio website created for SITE 1101. It introduces the author, sh
     ├── turan-profile.png
     ├── Turan Picture.png
     ├── certificate.jpg
-    └── Project 1.jpg
+    ├── Project 1.jpg
+    └── ada.image.jpg
 ```
 
 ## Features
