@@ -1,11 +1,11 @@
 :root {
   color-scheme: dark;
-  --color-ink: #e8f3f0;
-  --color-muted: #a7bbb7;
+  --color-ink: #f3fbf9;
+  --color-muted: #c2d2ce;
   --color-paper: #07110f;
   --color-surface: rgb(16 29 27 / 76%);
-  --color-accent: #72e0ba;
-  --color-accent-dark: #a3f4d5;
+  --color-accent: #82eac2;
+  --color-accent-dark: #aaf4d9;
   --color-border: rgb(196 232 221 / 17%);
   --color-night: #091518;
   --color-gold: #ffc978;
@@ -39,7 +39,7 @@ body {
   color: var(--color-ink);
   font-family: var(--font-body);
   font-size: 1rem;
-  line-height: 1.65;
+  line-height: 1.7;
 }
 
 body::before {
@@ -93,6 +93,7 @@ img {
 
 a {
   color: var(--color-accent-dark);
+  font-weight: 600;
 }
 
 a:hover {
@@ -117,7 +118,17 @@ p {
 h1,
 h2,
 h3 {
-  line-height: 1.15;
+  color: #f7fffc;
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+h2,
+h3 {
+  background: linear-gradient(105deg, #f7fffc 8%, #aff2d8 62%, #ffdc9d 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .container,

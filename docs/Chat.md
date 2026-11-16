@@ -1036,3 +1036,43 @@ The visual preview showed the flame and warm glass-card styling. git diff --chec
 5:14 PM
 1m 34s
 •
+
+
+
+
+
+
+I’ll review the shared typography and accent rules in style.css, then make a global contrast/readability pass without changing page-specific layouts.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The shared palette already uses emerald/gold, but muted copy and some unstyled headings can be brighter. I’ll lift the base and muted text colors, add a consistent high-contrast heading treatment, and preserve the existing button and card palettes.
+
+
+
+
+Updated the shared typography rules in style.css. The global body line height is now 1.7; headings are brighter and heavier, with an emerald-to-gold gradient on h2 and h3. git diff --check passed.
+
+
+
++17
+-6
+5:21 PM
+55s
+•
