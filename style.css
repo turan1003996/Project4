@@ -28,7 +28,11 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  background: var(--color-paper);
+  background-color: var(--color-paper);
+  background-image:
+    radial-gradient(ellipse at 12% 8%, rgb(40 100 90 / 9%), transparent 38rem),
+    radial-gradient(ellipse at 88% 58%, rgb(231 185 97 / 9%), transparent 34rem),
+    linear-gradient(145deg, #fbfcf9 0%, #f2f6f2 54%, #f8f5ed 100%);
   color: var(--color-ink);
   font-family: var(--font-body);
   font-size: 1rem;
